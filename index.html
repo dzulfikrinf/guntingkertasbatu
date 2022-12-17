@@ -1,22 +1,24 @@
 <html>
   <head>
-    <title>Suwit Jawa</title>
+    <title>Game Suwit</title>
   </head>
   <style>
     #computer {
       border: 3px black solid;
+      border-radius: 30px;
       height: 300px;
       width: 600px;
       margin: 25 auto;
-      background-color: aqua;
+      background-color: rgb(255, 255, 255);
     }
 
     #player {
       border: 3px black solid;
+      border-radius: 30px;
       height: 300px;
       width: 600px;
       margin: 25 auto;
-      background-color: aquamarine;
+      background-color: rgb(255, 255, 255);
     }
 
     body {
@@ -40,29 +42,28 @@
       height: 130px;
       display: block;
       margin: auto;
-      border: 5px black solid;
-      border-radius: 50%;
+      border-radius: 20%;
     }
 
-    #gajah,
-    #orang,
-    #semut {
+    #kertas,
+    #gunting,
+    #batu {
       transition: 0.3s;
       position: relative;
       top: 0;
       cursor: pointer;
     }
 
-    #gajah:hover,
-    #semut:hover,
-    #orang:hover,
+    #kertas:hover,
+    #gunting:hover,
+    #batu:hover,
     #active {
       box-shadow: 0 0 10px 5px limegreen;
     }
 
-    #gajah:active,
-    #semut:active,
-    #orang:active {
+    #kertas:active,
+    #gunting:active,
+    #batu:active {
       top: 2px;
     }
 
@@ -71,11 +72,11 @@
       width: 300px;
       height: 60px;
       line-height: 60px;
-      border: 5px solid salmon;
+      border: 5px solid rgb(0, 0, 0);
       background-color: white;
       border-radius: 30px;
       text-align: center;
-      color: #f89bb4;
+      color: #000000;
       font-size: 26px;
       text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
     }
@@ -85,39 +86,41 @@
       width: 150px;
       height: 60px;
       line-height: 60px;
-      border: 5px solid salmon;
+      border: 5px solid rgb(0, 0, 0);
       background-color: white;
       border-radius: 30px;
       text-align: center;
-      color: #f89bb4;
+      color: #000000;
       font-size: 26px;
       text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
     }
   </style>
   <body>
-    <h1>SUWIT JAWA</h1>
+    <h1>Game Suwit</h1>
     <div id="player">
       <h3>PILIH</h3>
       <ul>
         <li>
-          <img id="gajah" src="gajah.png" />
+          <img id="kertas" src="kertas.png" />
         </li>
         <li>
-          <img src="orang.png" id="orang" />
+          <img id="gunting" src="gunting.png" />
         </li>
         <li>
-          <img src="semut.png" id="semut" />
+          <img id="batu" src="batu.png" />
         </li>
       </ul>
     </div>
+    <h3>Skor Player</h3>
     <div id="skorplayer"></div>
     <div id="info"></div>
     <div id="skorkomputer"></div>
+    <h3>Skor Komputer</h3>
     <div id="computer">
       <h3>COMPUTER</h3>
-      <img src="tanya.png" id="gambarkomputer" />
+      <img src="question.png" id="gambarkomputer" />
     </div>
 
-    <script src="suwitjawa.js"></script>
+    <script src="suwit.js"></script>
   </body>
 </html>

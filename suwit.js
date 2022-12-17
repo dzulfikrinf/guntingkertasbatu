@@ -1,24 +1,24 @@
 function pilihankomputer() {
   let komputer = Math.round(Math.random() * 9 + 1);
   if (komputer <= 3) {
-    return "gajah";
+    return "batu";
   } else if (komputer > 3 && komputer <= 6) {
-    return "semut";
+    return "kertas";
   } else {
-    return "orang";
+    return "gunting";
   }
 }
 
 function rules(player, komputer) {
   if (player == komputer) return "SERI";
-  if (player == "gajah") return komputer == "semut" ? "KALAH" : "MENANG";
-  if (player == "semut") return komputer == "orang" ? "KALAH" : "MENANG";
-  if (player == "orang") return komputer == "gajah" ? "KALAH" : "MENANG";
+  if (player == "gunting") return komputer == "batu" ? "KALAH" : "MENANG";
+  if (player == "batu") return komputer == "kertas" ? "KALAH" : "MENANG";
+  if (player == "kertas") return komputer == "gunting" ? "KALAH" : "MENANG";
 }
 
 function putar() {
   let gambarkomputer = document.getElementById("gambarkomputer");
-  let gambar = ["gajah.png", "orang.png", "semut.png"];
+  let gambar = ["kertas.png", "batu.png", "gunting.png"];
   let i = 0;
   let waktumulai = new Date().getTime();
   setInterval(function () {
